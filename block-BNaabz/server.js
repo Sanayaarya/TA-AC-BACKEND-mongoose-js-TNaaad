@@ -9,7 +9,7 @@ var mongoose = require('mongoose')
 
 mongoose.connect(
   "mongodb://localhost:27017/",
-  {useNewUrlParser: true/},
+  {useNewUrlParser: true},
   (err)=>{
     console.log(err? err : "Connected to database")
   })
