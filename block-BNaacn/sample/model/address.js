@@ -3,13 +3,11 @@ var Schema = mongoose.Schema;
 var addressSchema = new Schema(
   {
     village: String,
-    city: String,
-    state: String,
+    city: {type:String,required:true},
+    state: {type:String,required:true},
     pin: Number,
-    user: mongoose.Schema.types.ObjectId,
-  },
-  { timestamps: true }
-);
+    user:Schema.types.ObjectId,
+  },{ timestamps: true });
 
 let address = mongoose.model('Address', addressSchema);
 module.exports = address;
