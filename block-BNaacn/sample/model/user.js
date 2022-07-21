@@ -8,5 +8,6 @@ var userSchema = new Schema({
   favourates:[String],
   password:{type:String,minlength:5,maxlength:20},
   createdAt:{type:Date, default:new Date()}
-})
-module.exports = mongoose.model('User' , userSchema);
+
+},{ timestamps:true})
+module.exports = mongoose.model('User' , userSchema);  
